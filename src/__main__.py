@@ -59,7 +59,7 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def load_json_file(path: str) -> list[dict]:  # type: ignore[type-arg]
+def load_json_file(path: str) -> list[dict]:
     """Load and parse a JSON file safely.
 
     Args:
@@ -85,7 +85,7 @@ def load_json_file(path: str) -> list[dict]:  # type: ignore[type-arg]
         print(f"Error: expected a JSON array in {path}", file=sys.stderr)
         sys.exit(1)
 
-    return data  # type: ignore[return-value]
+    return data
 
 
 def load_functions(path: str) -> list[FunctionDef]:
@@ -136,8 +136,8 @@ def main() -> None:
 
     print(f"Loaded {len(functions)} function(s) and {len(prompts)} prompt(s).")
 
-    from src.vocab import load_model, load_vocabulary, build_reverse_vocab
-    from src.pipeline import run_pipeline
+    from vocab import load_model, load_vocabulary, build_reverse_vocab
+    from pipeline import run_pipeline
 
     model = load_model()
     vocab = load_vocabulary(model)

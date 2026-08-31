@@ -5,8 +5,9 @@ from typing import Any
 
 from llm_sdk import Small_LLM_Model
 
-from src.__main__ import FunctionDef, Prompt
-from src.decoder import select_function, extract_argument
+from __main__ import FunctionDef, Prompt
+from decoder import select_function, extract_argument
+
 
 def build_prompt(
     prompt: str,

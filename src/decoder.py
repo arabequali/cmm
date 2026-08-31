@@ -1,6 +1,5 @@
 """Constrained decoding engine for guaranteed valid JSON function calls."""
 
-import sys
 from typing import Any
 
 from llm_sdk import Small_LLM_Model
@@ -90,7 +89,6 @@ def generate_number(
     Returns:
         Tuple of (parsed float value, updated input_ids).
     """
-    NUMBER_CHARS = set("0123456789")
     DECIMAL_CHARS = set("0123456789.")
     generated = ""
     current_ids = input_ids[:]
