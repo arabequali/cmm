@@ -6,7 +6,7 @@ from typing import Any
 from llm_sdk import Small_LLM_Model
 
 from __main__ import FunctionDef, Prompt
-from decoder import select_function, extract_argument
+from .decoder import select_function, extract_argument
 
 
 def build_prompt(

@@ -136,8 +136,8 @@ def main() -> None:
 
     print(f"Loaded {len(functions)} function(s) and {len(prompts)} prompt(s).")
 
-    from vocab import load_model, load_vocabulary, build_reverse_vocab
-    from pipeline import run_pipeline
+    from .vocab import load_model, load_vocabulary, build_reverse_vocab
+    from .pipeline import run_pipeline
 
     model = load_model()
     vocab = load_vocabulary(model)
